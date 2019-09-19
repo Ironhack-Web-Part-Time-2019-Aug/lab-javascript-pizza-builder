@@ -1,25 +1,20 @@
 // Write your Pizza Builder JavaScript in this file.
 
-function toggleElement(className) {
-  let elements = document.querySelectorAll(className);
+function toggleElement(targetClassName, toggleClass) {
+  let elements = document.querySelectorAll(targetClassName);
   elements.forEach((element) => {
-    element.classList.toggle('hidden');
+    element.classList.toggle(toggleClass);
   });
 }
 
-function toggleCrust() {
-  let crust = document.querySelector('.crust')
-  crust.classList.toggle('crust-gluten-free')
-}
-
 let pepperButton = document.querySelector('.btn-green-peppers')
-pepperButton.onclick = () => toggleElement(".green-pepper");
+pepperButton.onclick = () => toggleElement(".green-pepper", 'hidden');
 
 let pepperonniButton = document.querySelector('.btn-pepperonni')
-pepperonniButton.onclick = () => toggleElement(".pep");
+pepperonniButton.onclick = () => toggleElement(".pep", 'hidden');
 
 let mushroomButton = document.querySelector('.btn-mushrooms')
-mushroomButton.onclick = () => toggleElement(".mushroom");
+mushroomButton.onclick = () => toggleElement(".mushroom", 'hidden');
 
 let crustButton = document.querySelector('.btn-crust')
-crustButton.onclick = () => toggleCrust();
+crustButton.onclick = () => toggleElement('.crust', 'crust-gluten-free');
