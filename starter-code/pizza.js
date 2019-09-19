@@ -7,6 +7,11 @@ function toggleElement(className) {
   });
 }
 
+function toggleCrust() {
+  let crust = document.querySelector('.crust')
+  crust.classList.toggle('crust-gluten-free')
+}
+
 let pepperButton = document.querySelector('.btn-green-peppers')
 pepperButton.onclick = () => toggleElement(".green-pepper");
 
@@ -15,3 +20,6 @@ pepperonniButton.onclick = () => toggleElement(".pep");
 
 let mushroomButton = document.querySelector('.btn-mushrooms')
 mushroomButton.onclick = () => toggleElement(".mushroom");
+
+let crustButton = document.querySelector('.btn-crust')
+crustButton.onclick = () => toggleCrust();
